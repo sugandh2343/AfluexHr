@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.SalaryFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:orientation="vertical">
+
+
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="Salary Report"
+         android:layout_gravity="center"
+         android:gravity="center"
+         android:textSize="18sp"
+         android:textColor="@color/black"
+         android:background="@color/white_smoke"/>
+     <LinearLayout
+         android:id="@+id/ll_found"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:background="@drawable/shape_rectangle_background"
+         android:orientation="vertical">
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="8dp"
+             android:background="@drawable/shape_splash_background"
+             android:orientation="horizontal">
+             <TextView
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:layout_height="wrap_content"
+                 android:text="Leave Type"
+                 android:gravity="center"
+                 android:textSize="14sp"
+                 android:textStyle="bold"
+                 android:textColor="@color/white"
+                 />
+             <View
+                 android:layout_width="0dp"
+                 android:layout_weight="0.01"
+                 android:layout_height="0.8dp"
+                 android:background="@color/gray"/>
+             <TextView
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:layout_height="wrap_content"
+                 android:gravity="center"
+
+                 android:text="Limit"
+                 android:textSize="14sp"
+                 android:textStyle="bold"
+                 android:textColor="@color/white"
+                 />
+             <View
+                 android:layout_width="0dp"
+                 android:layout_weight="0.01"
+                 android:layout_height="0.8dp"
+                 android:background="@color/gray"/>
+             <TextView
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:layout_height="wrap_content"
+                 android:gravity="center"
+
+                 android:text="Used"
+                 android:textSize="14sp"
+                 android:textStyle="bold"
+                 android:textColor="@color/white"
+                 />
+             <View
+                 android:layout_width="0dp"
+                 android:layout_weight="0.01"
+                 android:layout_height="0.8dp"
+                 android:background="@color/gray"/>
+             <TextView
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:layout_height="wrap_content"
+                 android:text="Balance"
+                 android:gravity="center"
+
+                 android:textSize="14sp"
+                 android:textStyle="bold"
+                 android:textColor="@color/white"
+                 />
+             <View
+                 android:layout_width="0dp"
+                 android:layout_weight="0.01"
+                 android:layout_height="0.8dp"
+                 android:background="@color/gray"/>
+
+         </LinearLayout>
+
+         <androidx.recyclerview.widget.RecyclerView
+             android:id="@+id/rv_leave_count"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             tools:itemCount="2"
+             tools:listitem="@layout/layout_leave_count_single_row"
+             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+     </LinearLayout>
+     <TextView
+         android:id="@+id/txt_no_record"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:text="NO record Found"
+         android:textStyle="normal"
+         android:textColor="@color/black"
+         android:background="@color/yellow_50"
+         android:textSize="26sp"
+         android:gravity="center"
+         android:layout_gravity="center"/>
+ </LinearLayout>
+
+</FrameLayout>
